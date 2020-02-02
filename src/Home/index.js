@@ -4,9 +4,7 @@ import { Image } from 'react-native';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 import Logo from '../assets/dog.png';
 
-MapboxGL.setAccessToken(
-  'pk.eyJ1IjoiZmFiaW9iYXJib3phNyIsImEiOiJjazY0OTBpc2Ywd2JtM2VtbWw5aWoydzUyIn0.1S9e4rvlXcALxL1gD-4ywA'
-);
+MapboxGL.setAccessToken('SET_YOUR_MAPBOX_KEY_HERE');
 
 export default function Home() {
   const nasa = [-95.089323, 29.558407];
@@ -19,9 +17,12 @@ export default function Home() {
       styleURL={MapboxGL.StyleURL.Dark}
     >
       <MapboxGL.Camera centerCoordinate={nasa} zoomLevel={11} />
+
       <MapboxGL.PointAnnotation id="first-annotation" coordinate={nasa}>
         <Image style={{ width: 50, height: 50 }} source={Logo} />
       </MapboxGL.PointAnnotation>
+
+      {/* Você pode ter quantos marcadores quiser :), mude os id's! */}
       <MapboxGL.PointAnnotation id="second-annotation" coordinate={university}>
         <Image style={{ width: 50, height: 50 }} source={Logo} />
       </MapboxGL.PointAnnotation>
