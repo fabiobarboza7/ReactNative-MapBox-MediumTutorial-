@@ -1,8 +1,6 @@
 import React from 'react';
-import { Text } from 'react-native';
+import Home from './Home';
 
-// import { Container } from './styles';
-
-export default function App() {
-  return <Text>Hello World</Text>;
+export default function src() {
+  return <Home />;
 }

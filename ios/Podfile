@@ -40,7 +40,6 @@ target 'mapBox' do
   end
 
    # Mapbox
-  pod 'react-native-mapbox-gl', :path => '../node_modules/@react-native-mapbox-gl/maps'
   use_frameworks!
 
   use_native_modules!
